@@ -53,6 +53,10 @@ disable_ext_logs () {
   vpncmd_hub ExtOptionSet DisableIpRawModeSecureNAT /VALUE:true
   vpncmd_hub ExtOptionSet DisableKernelModeSecureNAT /VALUE:true
 }
+# See if user exists
+checkUser () {
+  echo "$0"
+}
 adduser () {
     printf " $1"
     vpncmd_hub UserCreate $1 /GROUP:none /REALNAME:none /NOTE:none
